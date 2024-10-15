@@ -82,6 +82,7 @@ public static void main(String[] args)
 }
 
 b=10
+-------------------------------------------------------------------------------------------
 
 Q7) Find the output of the following
 public class Test
@@ -100,7 +101,8 @@ public static void main(String[] args)
 	}
 }
 }
-
+==>o/p b=11
+-----------------------------------------------------------------------------------------
 Q8) Find the output of the following
 
 public class Test
