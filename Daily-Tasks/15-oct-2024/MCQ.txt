@@ -52,6 +52,7 @@ class HelloWorld
 }
 
 ans = 1
+----------------------------------------------------------------------------------------
 
 Q5) Find the output of the following
 What is the range of data type short in Java?
@@ -60,6 +61,8 @@ b. -32768 to 32767
 c. -2147483648 to 2147483647
 d. None of the mentioned
 
+==>b. -32768 to 32767
+-----------------------------------------------------------------------------------------
 Q6) Find the output of the following
 public class Test
 {
@@ -77,6 +80,8 @@ public static void main(String[] args)
 	}
 }
 }
+
+b=10
 
 Q7) Find the output of the following
 public class Test
