@@ -1,0 +1,113 @@
+Q1) Find the output of the following
+An expression involving byte, int literal numbers is promoted to which of these?
+a. int
+b. long
+c. byte
+d. float
+==> a.int
+
+In Java, when an expression involves byte, short, char, or int literal numbers, 
+they are promoted to int during arithmetic operations, even if they start as smaller
+ types like byte. This process is known as "numeric promotion." If the result needs to
+  be stored in a smaller type (like byte), explicit casting is required.
+
+-------------------------------------------------------------------------------------------------------------------
+
+Q2) Find the output of the following
+What is the range of data type short in Java?
+a. -128 to 127
+b. -32768 to 32767
+c. -2147483648 to 2147483647
+d. None of the mentioned
+
+==>b. -32768 to 32767
+------------------------------------------------------------------------------------------------------------------
+
+Q3) Find the output of the following
+Which of these operators can skip evaluating right hand operand?
+a. !
+b. |
+c. &
+d. &&
+
+==> d.&&
+The && operator is a logical AND operator that short-circuits, meaning if the left-hand operand 
+evaluates to false, the right-hand operand is not evaluated, as the overall result of the expression 
+is already determined to be false.
+
+-----------------------------------------------------------------------------------------------------------------------
+Q4) Find the output of the following
+
+class HelloWorld 
+{
+    public static void main(String[] args)
+    {
+       int i = 0;
+
+        int j = i++ + i;
+
+        System.out.printf("%d\n", j);
+
+    }
+}
+
+ans = 1
+
+Q5) Find the output of the following
+What is the range of data type short in Java?
+a. -128 to 127
+b. -32768 to 32767
+c. -2147483648 to 2147483647
+d. None of the mentioned
+
+Q6) Find the output of the following
+public class Test
+{
+public static void main(String[] args)
+{
+	int a = 20, b=10;
+
+   if((a<b) && (++b < 20))
+	{
+	   System.out.println("Logical AND ");
+	}
+	else
+	{
+		System.out.println("b value is : "+b);
+	}
+}
+}
+
+Q7) Find the output of the following
+public class Test
+{
+public static void main(String[] args)
+{
+	int a = 20, b=10;
+
+        if((a<b) & (++b < 20))
+	{
+	   System.out.println("Boolean AND ");
+	}
+	else
+	{
+		System.out.println("b value is : "+b);
+	}
+}
+}
+
+Q8) Find the output of the following
+
+public class Test
+{
+public static void main(String[] args)
+{
+	      int z = 5;
+		  if(++z > 5 || ++z > 6)   //Logical OR
+		  {
+			  z++;
+		  }
+		  System.out.println(z);
+
+}
+}
