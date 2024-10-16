@@ -1,0 +1,319 @@
+Q1) Find the output of the following program
+
+public class Test
+{
+	public static void main(String args[])
+	{
+		boolean x = true;
+		int a;
+		if(x) a = x ? 1: 2;
+		else a = x ? 3: 4;
+		System.out.println(a);
+	}
+}
+
+==> o/p=1
+---------------------------------------------------------------------------
+
+
+Q2) Find the output of the following program
+public class Test
+{
+	public static void main(String args[])
+	{
+		boolean x = false;
+		int a;
+		if(x) a = x ? 1: 2;
+		else a = x ? 3: 4;
+		System.out.println(a);
+	}
+}
+
+==>o/p=4
+-----------------------------------------------------------------------------------
+Q3) Find the output of the following program
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int i = 15;
+		int j = 21;
+		System.out.println((i < j) ? i++ : j--);
+	}
+}
+==> o/p =15
+-------------------------------------------------------------------------------
+Q4) Find the output of the following program
+public class Test
+{
+    public static void main(String[] args) 
+    {
+    char a = 'A';
+    int i = 1;
+    System.out.print(true ? a : 0);
+    System.out.print(false ? i : a);
+    }
+}
+==>A65
+-----------------------------------------------------------------------------------------
+
+Q5) Find the output of the following program
+class Test64 
+{
+	public static void main(String[] args) 
+	{
+		if((call(3)) ||(call(7)))
+		{
+			System.out.println("Result is true");			
+		}
+		if((call(6)) ||(call(9)))
+		{
+			System.out.println("Result is true");			
+		}
+	}
+	public static boolean call(int i)
+	{
+		if(i<5)
+		{
+			System.out.println("i < 5");
+			return true;
+		}
+		else
+		{
+			System.out.println("i>=5");
+			return false;
+		}
+	}
+}
+
+Q6) Find the output of the following program
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		boolean b=false;
+		if(b=true)
+		{
+		System.out.println("Assigning not comparing..");
+		}
+		else
+		{
+			System.out.println("Bad");
+		}
+	}
+}
+
+o/p= Assigning not comparing
+
+Q7) Find the output of the following program
+
+public class Test
+{
+    public static void main(String[] argv)
+    {
+       byte i=10;
+       byte j = 10;
+       byte z = i * j;
+       System.out.println(z);
+
+    }
+}
+
+o/p=Error 
+In a program 10*10=100
+but byte size is -128 to 127
+this reasone explicite type casting Required thet reasone output is Error 
+---------------------------------------------------------------------------------------
+
+Q8) Find the output of the following program
+
+public class Test
+{
+       public static void main(String[] argv)
+       {
+             String a = "a";
+             int b = 1;
+             String c = a + b;
+             System.out.println(c);
+       }
+}
+
+==>a1
+------------------------------------------------------------------------------------
+Q9) Find the output of the following program
+public class Test
+{
+     public static void main(String[] argv) 
+     {
+          int a = 9;
+          int b = 65;
+          int c = -12;
+          float d = 9.0F;
+          char e = 'A';
+          System.out.println(a < b);
+          System.out.println(d < c);
+          System.out.println(e <= a);
+          System.out.println(a > d);
+          System.out.println(c >= e);
+     }
+}
+o/p=
+True
+false
+false
+false
+false
+--------------------------------------------------------------------------------------
+Q10) Find the output of the following program
+public class Test
+{
+      public static void main(String[] argv) 
+      {
+            char a = 'A';
+            float f = 100.11F;
+            if (a < f) 
+            {
+                  System.out.println("a < f");
+            }
+      }
+}
+
+Q11) Find the output of the following program
+
+public class Test 
+{
+      public static void main(String[] argv) 
+      {
+           char a = 'A';
+           boolean b = true;
+           if (a > b) 
+           {
+                System.out.println("a > b");
+           }
+           System.out.println();
+      }
+}
+
+Q12) Find the output of the following program
+
+public class Test
+{
+        public static void main(String[] argv)
+        {
+               int z = 5;
+               if(++z > 5 || ++z > 6) z++;   
+               System.out.println(z);
+               z = 5;
+               if(++z > 5 | ++z > 6) z++;   
+               System.out.println(z);
+        }
+}
+
+Q13) Find the output of the following program
+
+public class Test 
+{
+       public static void main(String[] argv) 
+       {
+             int val = 0;
+             boolean test = (val == 0) || (++val == 2);
+             System.out.println("test = " + test + "\nval = " + val);
+       }
+}
+
+Q14) Find the output of the following program
+public class Test 
+{
+      public static void main(String[] argv) 
+      {
+           boolean x = true;
+           int a = 0;
+           int b = 1;
+           double c = 2D;
+           a = x ? b : c;
+           System.out.println(a);
+      }
+}
+
+Q15) Find the output of the following program
+
+public class Test 
+{
+      public static void main(String[] argv) 
+      {
+           int x = 5;
+           x += 10; 
+           x = x + 10;
+		   System.out.println(x);
+      }
+}
+
+
+Q16) Find the output of the following program
+public class Test 
+{
+      public static void main(String[] args) 
+      {
+            Integer i = 42;
+            String s = (i<40)?"life":(i>50)?"universe":"everything";
+            System.out.println(s);
+      }
+}
+
+Q17) Find the output of the following program
+
+public class Test 
+{
+       public static void main(String[] args) 
+       {
+             Long x = 42L;
+             Long y = 44L;
+             System.out.print(" " + 7 + 2 + " ");
+             System.out.print(foo() + x + 5 + " ");
+             System.out.println(x + y + foo());
+       }
+       static String foo() 
+       { 
+             return "foo"; 
+       }
+}
+
+Q18) Find the output of the following program
+
+class Test
+{
+     public static void main(String args[])
+     {
+          String s = new String("Foo");
+          if(s instanceof String)
+          {
+                System.out.println("s is a String");
+          }
+     }
+}
+
+Q19) Find the output of the following program
+public class Test
+{
+        public static void main(String[] argv)
+        {
+              String s = "123";
+              s += "45";
+              s += 67;
+              System.out.println(s);
+              int b = 2;
+              System.out.println("" + b + 3);
+        }
+}
+
+Q20)  Find the output of the following program
+public class Test
+{
+        public static void main(String[] argv)
+        {
+              while(false)
+	      {
+	      System.out.println("Not Executed!!!");
+	      }
+        }
+}
