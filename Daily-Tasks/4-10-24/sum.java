@@ -1,5 +1,5 @@
 
- public class tax
+ public class sum
  {
 	public static void main(String []args)
 	 {
