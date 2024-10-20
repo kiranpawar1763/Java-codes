@@ -1,5 +1,6 @@
 public class sumOfFirst100NaturalNumber
 {
+    
     public static void main(String[]args)
     {
         int sum=0;
