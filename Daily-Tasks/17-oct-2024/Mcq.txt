@@ -73,6 +73,9 @@ class Test
     }
 }
 
+output = error because byte range -128 to 127 this reason error 
+
+---------------------------------------------------------------------------------
 Q5) Find the output of the following program
 public class Test
 {
@@ -89,6 +92,10 @@ public class Test
            }
      }
 }
+
+output = error
+
+--------------------------------
 Q6) Find the output of the following program
 public class Test
 {
@@ -104,6 +111,10 @@ public class Test
              }
        }
 }
+
+// output = Error
+ //Reasone :- In switch case duplicate case label not allowed
+ --------------------------------------
 
 Q7) Find the output of the following program
 
@@ -133,6 +144,10 @@ public class Test
        }
 }
 
+//output= x is one
+        //out of the switch
+
+
 Q8) Find the output of the following program
 
 public class Test
@@ -153,6 +168,9 @@ public class Test
       }
 }
 
+output = x is an even numbers
+because = after case to we  dont use break or ; this reason program can't stop
+------------------------------------------------------------------------------------
 Q9) Find the output of the following program
 public class Test
 {
@@ -168,6 +186,12 @@ public class Test
              }
         }
 }
+*output =2
+         default
+         3
+         4
+ */
+ --------------------------------------------------------------------------------
 
 Q10) Find the output of the following program
 
@@ -176,13 +200,18 @@ public class Test
       public static void main(String[] argv)
       {
            short x = 200;
-           switch( x ) {
+           switch( x )
+            {
                   case 100 : System.out.println("One hundred");break ;
                   case 200 : System.out.println("Two hundred");break ;
                   case 33000 : System.out.println("Thirty thousand ");break ;
           }
       }
 }
+
+output = Error
+ 33000 is out of the short Range
+----------------------------------------------------------------------------------
 Q11) Find the output of the following program
 
 public class Test
@@ -197,6 +226,13 @@ public class Test
           }
       }
 }
+
+/* output = error
+  In the provided code, you're using a long variable (x) in a switch statement.
+   However, in Java, the switch statement supports only certain primitive types
+    (such as int, char, short, byte, and their corresponding wrapper types) 
+*/
+----------------------------------------------------------------------------------
 Q12) Find the output of the following program
 
 public class Test
@@ -217,6 +253,8 @@ public class Test
           }
     }
 }
+//output = value is three
+-----------------------------------------------------------------------------
 Q13) Find the output of the following program
 
 class Test
@@ -231,13 +269,25 @@ class Test
           System.out.println("World");
         }
 }
+*Error
+ The code will still result in a compile-time error because of the use of the final 
+ keyword and an infinite loop. Specifically, the final keyword means the variables 
+ a and b cannot be modified once initialized, and since a is always less than b, the 
+ condition a < b will always evaluate to true, creating an infinite loop.
 
+The compiler also detects that the line System.out.println("World"); 
+is unreachable because the loop will never terminate, which leads to the
+ "unreachable code" error.
+*/
+----------------------------------------------------------------------------
 Q14) Which of these selection statements test only for equality?
 
 a) if
 b) switch
 c) if & switch
 d) none of the mentioned
+
+==> b) switch
 
 
 Q15) Find the output of the following program
