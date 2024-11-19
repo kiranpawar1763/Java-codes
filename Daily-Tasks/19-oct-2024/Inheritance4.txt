@@ -1,0 +1,602 @@
+Que-1)
+_______________
+class Animal
+{
+ public Animal(){
+  System.out.println("Base Constructor");
+ }
+}
+class Cat extends Animal{
+ public Cat()
+ {	
+  System.out.println("Derived Constructor");		
+ }
+}
+public class Program {
+ public static void main(String[] args) {
+  Cat c = new Cat();   
+ }
+}
+
+A)Parent Constructor
+
+B)Parent Constructor
+  Child Constructor
+
+C)Child Constructor
+  Parent Constructor
+
+D)Parent Constructor
+
+
+____________________________________________________________________
+Que-2)
+______________
+Which is/are false statements
+
+A.final class cannot be inherited
+B.final method can be inherited
+C.final method can be overridden
+D.final variable of a class cannot be changed.
+
+
+____________________________________________________________________
+Que-3)
+_______________
+Which cannot be inherited from a super class in Java programming?
+
+A.Cannot override private method of a class
+B.Protected methods are visible to only immediate child class
+C.Public methods of a class are visible to all.
+D.All
+
+____________________________________________________________________
+Que-4)
+class A{
+	public A doStuff() {
+		System.out.println("OCPJP");
+		return null;
+	}
+}
+class B extends A{
+	public B doStuff() {
+		System.out.println("SCJP");
+		return null;
+	}
+}
+public class Test {
+	public static void main(String[] args) {
+		
+			A a1=new B();
+			a1.doStuff();
+		
+	}
+} 
+
+
+What will be the output of this above programm?
+
+
+a:OCPJP
+b:SCJP
+c:Compiler error
+d:non of the above
+
+
+_______________________________________________________________
+Que-5)
+What is the purpose of the 'super' keyword in Java?
+
+a:To create a new instance of a class
+b:To call a method of the child class 
+c:To define a static method 
+d:To call the constructor of the parent class 
+
+
+___________________
+________________________________________________________________________
+Que-6)
+____________________
+What is the result of compiling and running this program?
+
+class Mammal{
+  void eat(Mammal m){
+   System.out.println("Mammal eats food");
+  }
+}
+
+class Cattle extends Mammal{
+  void eat(Cattle c){
+   System.out.println("Cattle eats hay");
+  }
+}
+
+class Horse extends Cattle{
+  void eat(Horse h){
+    System.out.println("Horse eats hay");
+  }
+}
+public class Test{
+      public static void main(String[] args){
+            Mammal h = new Horse();
+            Cattle c = new Horse();
+            c.eat(h);
+      }
+}
+A. prints "Mammal eats food"
+B. prints "Cattle eats hay"
+C. prints "Horse eats hay"
+D. Class cast Exception at runtime.
+E. None of these
+
+
+
+______________________________________________________________________
+Que-7)
+_____________________
+Determine output:
+class A{
+  public void method1(){
+   System.out.print("Class A method1");
+  }
+}
+
+class B extends A{
+  public void method2(){
+   System.out.print("Class B method2");
+  }
+}
+
+class C extends B{
+  public void method2(){
+   System.out.print("Class C method2");
+  }	
+  public void method3(){
+   System.out.print("Class C method3");
+  }
+}
+
+public class Test{
+  public static void main(String args[]){
+	A a = new A();
+	C c = new C();		
+	c.method2();
+	a = c;
+	a.method3();
+	}
+}
+
+A. Class B method2 Class C method3
+B. Class C method2 Class C method3
+C. Compilation Error
+D. Runtime exception
+E. None of these
+
+
+___________________________________________________________________________
+Que-8)
+
+What is a multilevel inheritance in java
+
+a:A class extends two or more classes
+b:Two or more classes extend the same class
+c:A class extends another class which also extends another class
+d:All of the above
+
+
+
+___________________________________________________________________
+Que-9)
+______________________
+What will be the output?
+class Parent{
+      public void method(){
+            System.out.println("Hi i am parent");
+      }
+}
+public class Child extends Parent{
+      protected void method(){
+            System.out.println("Hi i am Child");
+      }
+      public static void main(String args[]){
+            Child child = new Child();
+            child.method();
+      }
+}
+A. Compiles successfully and print
+B. Compiles successfully and print
+C. Compile time error
+D. Run Time error
+E. None of This
+
+
+_______________________________________________________________
+Que-10)
+
+Choose the Correct Output for the following Snippet?
+public class Test {
+	static int a;
+    
+    public static void m1(int a)
+    {
+    	a=a;
+    	System.out.println(a);
+        a++;
+    }
+	
+	public static void main(String[] args) {
+        System.out.println(a);
+        m1(10);
+        System.out.println(a);
+	}
+}
+
+a)0 10 10
+b)0 10 0
+c)0 10 11
+d)CompileTime Error
+
+
+
+_____________________________________________________________
+Que-11)
+___________________________
+What will be the output?
+class A{
+      int i = 10;
+      public void printValue(){
+            System.out.print("Value-A");
+      }
+}
+
+class B extends A{
+      int i = 12;
+      public void printValue(){
+            System.out.print("Value-B");
+      }
+}
+
+public class Test{
+      public static void main(String args[]){
+            A a = new B();
+            a.printValue();
+            System.out.print(a.i);
+      }
+}
+A. Value-B 11
+B. Value-B 10
+C. Value-A 10
+D. Value-A 11
+E. None of these
+
+
+______________________________________________________________________
+Que-12)
+_____________________
+
+__________________________________________________________________________
+Que-13)
+_________________________
+class A{
+      A(String s){}
+
+      A(){}
+}
+
+ class B extends A{
+      B(){}
+       B(String s){
+             super(s);
+       }
+       void test(){
+             // insert code here
+       }
+ }
+Which of the below code can be insert at line 7 to make clean compilation ?
+A. A a = new B();
+B. A a = new B(5);
+C. A a = new A(String s);
+D. All of the above
+E. None of these
+
+
+_____________________________________________________________________________
+Que-14)
+__________________________
+Determine output:
+class A{
+      public void printValue(){
+            System.out.println("Value-A");
+      }
+}
+class B extends A{
+      public void printNameB(){
+            System.out.println("Name-B");
+      }
+}
+class C extends A{
+      public void printNameC(){
+            System.out.println("Name-C");
+      }
+}
+
+ public class Test{
+       public static void main (String[] args){
+             B b = new B();
+             C c = new C();
+             newPrint(b);
+             newPrint(c);
+       }
+       public static void newPrint(A a){
+             a.printValue();
+      }
+ }
+A. Value-A Name-B
+B. Value-A Value-A
+C. Value-A Name-C
+D. Name-B Name-C
+E. None of these
+
+
+___________________________________________________________________________
+Que-15)
+_______________________
+In below java code, whose “Car” will be called?
+
+class Father {
+	public void car() {
+		System.out.println("Father's Car");
+	}
+}
+class Son extends Father {
+	public void car() {
+		System.out.println("Son's Car");
+	}
+}
+public class Sample {
+	public static void main(String[] args) {
+		Son john = new Son();
+		john.car();
+	}
+}
+
+A.Father’s Car
+B.Son’s Car
+C.There is an ambiguity, so no one Car
+D.Compiler Error
+
+_______
+_________________________________________
+Que-16)
+____________________
+What is output of the program?
+class Test{
+        public void display(int x, double y){
+                System.out.println(x+y);
+        } 
+        public double display(int p, double q){
+                return (p+q);
+        }
+        public static void main(String args[]){
+                Test test = new Test();
+                test.display(4, 5.0);
+                System.out.println(test.display(4, 5.0));
+        }
+}
+A. 9.0 9.0
+B. 9 9
+C. Compilation Error
+D. None of these
+
+
+_____________________________________________________________
+Que-17)
+______________________
+what is the result of the following piece of code:
+public class Person{
+        public void talk(){
+                System.out.print("I am a Person");
+        }
+}
+
+public class Student extends Person{
+        public void talk(){
+                System.out.print("I am a Student");
+        }
+}
+
+public class Test{
+        public static void main(String args[]){
+                Person p = new Student();
+                p.talk();
+        }
+}
+A. I am a Person
+B. I am a Student
+C. I am a Person I am a Student
+D. I am a Student I am a Person
+
+
+________________________________________________________
+Que-18)
+Choose the Correct Output for the following Snippet?
+class B
+{
+	protected void m1()
+	{
+		System.out.println("class B method");
+	}
+}
+
+public class Test extends B{
+        void m1()
+	{
+		System.out.println("class Test method");
+	}
+	public static void main(String[] args) {
+        new Test().m1();
+	}
+}
+
+a)class B method
+b)class Test method
+c)Excption at Runtime
+d)CompileTime Error
+
+_______________________
+___________________________________________________________
+Que-19)
+_______________________
+What will be the output of the following program code?
+class Rectangle{
+      public int area(int length, int width){
+            return  length*width;
+      }
+}
+class Square extends Rectangle{
+      public int area(long length, long width){
+            return  (int) Math.pow(length, 2);
+      }
+}
+public class Test{
+      public static void main(String args[]){
+            Square r = new Square();
+            System.out.println(r.area(5 , 4));
+      }
+}
+A. Will not compile.
+B. Will compile and run printing out 20
+C. Runtime error
+D. Will compile and run printing out 25
+
+___________________________________________________
+Que-20)
+__________________
+What will be printed after executing following program code?
+class Base{
+	int value = 0;
+        Base(){
+        	addValue();
+        }
+        void addValue(){
+        	value += 10;
+        }
+        int getValue(){
+        	return value;
+        }
+}
+class Derived extends Base{
+	Derived(){
+		addValue();
+	}
+	void addValue(){
+		value +=  20;
+	}
+}
+public class Test{
+	public static void main(String[] args){
+		Base b = new Derived();
+		System.out.println(b.getValue());
+	}
+}
+A. 10
+B. 20
+C. 30
+D. 40
+
+__________________________________________________________
+Que-21)
+___________________
+
+
+________________________________________________________
+__________________________________________________________
+Que-25)
+_______________
+Determine output:
+class A{
+      public void printValue(){
+            System.out.println("Value-A");
+      }
+}
+class B extends A{
+      public void printNameB(){
+            System.out.println("Name-B");
+      }
+}
+class C extends A{
+      public void printNameC(){
+            System.out.println("Name-C");
+      }
+}
+
+ public class Test{
+       public static void main (String[] args){
+             B b = new B();
+             C c = new C();
+             newPrint(b);
+             newPrint(c);
+       }
+       public static void newPrint(A a){
+             a.printValue();
+      }
+ }
+A. Value-A Name-B
+B. Value-A Value-A
+C. Value-A Name-C
+D. Name-B Name-C
+E. None of these
+
+_______________________________________________
+Que-27)
+______________________
+What is the output for the below code ?
+class A{
+      public A(){
+            System.out.println("A");
+      }
+      public A(int i){
+            this();
+            System.out.println(i);
+      }
+}
+class B extends A{
+      public B(){
+            System.out.println("B");
+      }
+      public B(int i){
+            this();
+            System.out.println(i+3);
+      }
+}
+public class Test{
+      public static void main (String[] args){
+            new B(5);
+      }
+}
+
+A. A B 8
+B. A 5 B 8
+C. A B 5
+D. B 8 A 5
+E. None of these
+
+
+
+_____________________________________________________________
+Que-29)
+_________________
+Hiding the implementation complexity can ____________
+a) Make the programming easy
+b) Make the programming complex
+c) Provide more number of features
+d) Provide better features
+
+_____________________________________________________________
+Que-30)
+__________________
+Class is _________ abstraction.
+a) Object
+b) Logical
+c) Real
+d) Hypothetical
