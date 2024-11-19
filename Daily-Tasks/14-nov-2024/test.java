@@ -45,6 +45,7 @@ class Dog extends Mammal
     public Dog(String name, boolean hasFur, String breed)
      {
         super(name, hasFur); 
+        
         this.breed = breed;
     }
 

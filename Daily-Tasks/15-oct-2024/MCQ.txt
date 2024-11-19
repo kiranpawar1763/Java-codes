@@ -31,8 +31,10 @@ c. &
 d. &&
 
 ==> d.&&
-The && operator is a logical AND operator that short-circuits, meaning if the left-hand operand 
-evaluates to false, the right-hand operand is not evaluated, as the overall result of the expression 
+The && operator is a logical AND operator that short-circuits, meaning if the
+ left-hand operand 
+evaluates to false, the right-hand operand is not evaluated, as the
+ overall result of the expression 
 is already determined to be false.
 
 -----------------------------------------------------------------------------------------------------------------------

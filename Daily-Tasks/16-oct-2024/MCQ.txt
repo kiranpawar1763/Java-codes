@@ -178,6 +178,8 @@ public class Test
       }
 }
 
+==> o/p=a<f
+
 Q11) Find the output of the following program
 
 public class Test 
@@ -201,13 +203,15 @@ public class Test
         public static void main(String[] argv)
         {
                int z = 5;
-               if(++z > 5 || ++z > 6) z++;   
+               if(++z > 5 || ++z > 6)
+                z++;   
                System.out.println(z);
                z = 5;
                if(++z > 5 | ++z > 6) z++;   
                System.out.println(z);
         }
 }
+==> o/p-: 7 and 8
 
 Q13) Find the output of the following program
 
@@ -220,6 +224,8 @@ public class Test
              System.out.println("test = " + test + "\nval = " + val);
        }
 }
+==>test =false
+   val=1
 
 Q14) Find the output of the following program
 public class Test 

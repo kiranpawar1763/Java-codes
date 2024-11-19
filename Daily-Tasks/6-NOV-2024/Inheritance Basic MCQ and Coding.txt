@@ -1,0 +1,388 @@
+Question: 1
+What are the features reused using Inheritance in Java?
+
+a) Methods
+
+
+b) Variables
+
+
+c) Constants
+
+d) All the above
+==> ANS
+
+==========================================
+
+Question: 2
+
+What will be the output of the following Java program?
+class A
+{
+int i;
+void display()
+{
+System.out.println(i);
+}
+}
+class B extends A
+{
+int j;
+void display()
+{
+System.out.println(j);
+}
+}
+class inheritance_demo
+{
+public static void main(String args[])
+{
+B obj = new B();
+obj.i=1;
+obj.j=2;
+obj.display();
+}
+}
+
+
+
+a) 0
+
+
+b) 1
+
+
+c) 2
+==>ANS
+
+
+d) Compilation Error
+
+===========================================
+Question: 3
+You should use Inheritance when there is an IS-A relationship
+between classes. State TRUE or FALSE
+
+true
+==>ANS
+
+
+false
+
+
+======================================
+
+Question: 4
+What will be the output?
+class Base
+{
+int x = 19;
+}
+
+class Child extends Base
+{
+int x = 20;
+void shows()
+{
+System.out.println(“The base class data member (x) by Super Keyword :” + super.x);
+System.out.println(“The child class data member :” + x);
+
+}
+public static void main(String... a) 
+{
+    Child obj = new Child();
+    obj.shows();       
+}
+}
+
+
+a) The base class data member (x) by Super Keyword :19
+The child class data member :20
+
+
+b) The base class data member (x)by Super Keyword :0
+The child class data member :0
+
+
+==============================================================
+
+Question: 5
+Find Superclass and Subclass in the below Java code snippet?
+class B
+{
+void show(){}
+}
+class A
+{
+void hide(){}
+}
+
+
+
+a) B is superclass and A is subclass.
+
+
+b) A is superclass and B is a subclass.
+
+c) There is no superclass or subclass present.
+
+
+d) None
+
+================================================
+
+ Correct
+Question: 6
+Which is the keyword used to implement inheritance in Java?
+
+
+a) extends
+==>ANS
+
+
+b) implements
+
+
+c) instanceof
+
+
+d) None
+
+
+==============================================
+Question: 7
+The class that is being inherited or subclassed is called _.
+
+
+a) Subclass
+
+
+b) Superclass
+==>ANS
+
+================================================
+Question: 8
+Find Superclass and Subclass in the below Java program?
+class Liquid
+{
+void pour(){}
+}
+class Juice extends Liquid
+{
+void filter(){}
+}
+
+
+
+a) The Liquid is a superclass and Juice is a subclass.
+==>ANS
+
+b) The Liquid is a Subclass and Juice is a Superclass.
+
+
+c) There is no superclass or subclass
+
+
+d) None
+
+=======================================
+Question: 9
+class X
+{
+public void A()
+{
+System.out.println(“123”);
+}
+}
+class Y extends X
+{
+public void B()
+{
+System.out.println(“456”);
+}
+}
+class Z extends X
+{
+public void C()
+{
+System.out.println(“789”);
+}
+}
+class V extends Y
+{
+public void D()
+{
+System.out.println(“10”);
+}
+}
+public class Hybrid1
+{
+public static void main(String[] args)
+{
+Y obj=new Y();
+V obj2=new V();
+obj.A();
+obj2.B();
+}
+}
+
+
+a)
+123
+10
+
+
+b)
+789
+10
+
+
+c)
+456
+123
+
+
+d)
+123
+456
+
+=============================================
+Question: 10
+What will be the output of the following Java program?
+
+class A 
+{
+    int i;
+}    
+class B extends A 
+{
+    int j;
+    void display() 
+    {
+        super.i = j + 1;
+        System.out.println(j + " " + i);
+    }
+}    
+class inheritance 
+{
+    public static void main(String args[])
+    {
+        B obj = new B();
+        obj.i=1;
+        obj.j=2;   
+        obj.display();     
+    }
+}
+
+
+
+a) 2 2
+
+
+b) 3 3
+
+
+c) 2 3
+==>ANS
+
+d) 3 2
+
+
+============================================================================
+
+
+Q1 )  create base class Animal 
+
+Attributes:-
+
+No Attributes
+
+methods:-
+
+return type :- void
+method Name :- eat
+behavior of eat method:- this method will print the message that "This animal eats food."
+------
+create derived class name as Dog inherit from Animal
+
+Attribute:-
+
+No Attributes
+
+
+methods:-
+
+return type :- void
+method Name :- bark
+behavior of bark method:- this method will print the Message "The dog barks."
+
+------
+create main class to test your logic 
+create object initialize the values and call the methods
+
+
+
+===================================
+2)
+create base class Vehicle 
+with its attributes
+String brand
+int year
+
+methods:-
+
+return type :- void
+method Name :- start
+behavior of start method:- this method will print the message that " The vehicle is starting."
+------
+create derived class name as car inherit from vehicle
+
+Attribute:-
+
+String model
+
+
+methods:-
+
+return type :- void
+method Name :- displayCarDetails
+behavior of displayCarDetails method:- this method will print the brand, year,model
+
+------
+create main class to test your logic 
+create object initialize the values and call the methods
+
+
+========================================================
+
+
+Q3) create base class Person 
+Attributes :-
+
+ String name;
+    int age;
+
+methods:-
+
+return type :- void
+method Name :- displayDetails
+behavior of start method:- this method will print the name of the person , age of the person
+------
+create derived class name as Employee inherit from Person
+
+Attribute:-
+
+double salary;
+
+
+methods:-
+
+return type :- void
+method Name :- displayEmployeeDetails
+behavior of displayEmployeeDetails method:- try to call displayDetails method inside this method and print the salary also
+
+------
+create main class to test your logic 
+create object initialize the values and call the methods
+
+
