@@ -10,6 +10,9 @@
               System.out.println(x+" ");
         }
       }
+
+      op= 10
+          20
 ------------------------------------------------------
 
 Q 2. What is the output of this below program ?
@@ -21,6 +24,8 @@ public static  void main(String[] args) {
 	System.out.println(“Test2 class main method”);
 } 
 } 
+o/p=Test2 class Static Block
+    Test2 class main method
 ------------------------------------------------------
 
 Q 3. What is the output of this below program ?
