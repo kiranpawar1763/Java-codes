@@ -1,0 +1,197 @@
+1) What is the output of the following Java program?
+
+public class ExceptionExample 
+{
+    public static void main(String[] args) 
+    {
+        try 
+        {
+            String str = null;
+            System.out.println(str.length());
+        } catch (NullPointerException e) 
+        {
+            System.out.println("NullPointerException occurred.");
+        } finally
+         {
+            System.out.println("End of program.");
+        }
+    }
+}
+A) NullPointerException occurred. End of program.
+===> correct
+B) End of program.
+C) The program will terminate with an error.
+D) NullPointerException occurred.
+
+------------------------------------------------------------------------------
+2) What is the output of the following Java program?
+
+public class ExceptionExample {
+    public static void main(String[] args) {
+        try {
+            int[] nums = {1, 2, 3};
+            System.out.println(nums[3]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException occurred.");
+        } finally {
+            System.out.println("End of program.");
+        }
+    }
+}
+A) ArrayIndexOutOfBoundsException occurred. End of program.
+===>correct
+B) End of program.
+C) The program will terminate with an error.
+D) ArrayIndexOutOfBoundsException occurred.
+
+
+-------------------------------------------------------------------------------
+3) What is the output of the following Java program?
+
+public class ExceptionExample {
+    public static void main(String[] args) {
+        try {
+            int num1 = Integer.parseInt(args[0]);
+            int num2 = Integer.parseInt(args[1]);
+            int result = num1 / num2;
+            System.out.println("The result is: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero.");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Please provide two integers as command-line arguments.");
+        } catch (NumberFormatException e) {
+            System.out.println("Please provide valid integers as command-line arguments.");
+        } finally {
+            System.out.println("End of program.");
+        }
+    }
+}
+What will be the output of the program if it is executed with the command java ExceptionExample 5 0?
+
+A) Cannot divide by zero. End of program.
+===>correct
+B) Please provide two integers as command-line arguments. End of program.
+C) Please provide valid integers as command-line arguments. End of program.
+D) The program will terminate with an error.
+
+--------------------------------------------------------------------------------------------------
+4) What is the output of the following Java program?
+
+public class ExceptionExample {
+    public static void main(String[] args) 
+    {
+        try 
+        {
+            int num = Integer.parseInt("abc");
+            System.out.println("The number is: " + num);
+        } catch (NumberFormatException e)
+         {
+            System.out.println("NumberFormatException occurred.");
+        } finally
+        {
+            System.out.println("End of program.");
+        }
+    }
+}
+A) NumberFormatException occurred. End of program.
+===>correct
+B) End of program.
+C) The program will terminate with an error.
+D) NumberFormatException occurred.
+
+------------------------------------------------------------------------------------------
+5) What is the output of the following Java program?
+
+public class ExceptionExample 
+{
+    public static void main(String[] args) throws Exception
+     {
+        int num = 10;
+        if (num > 5) 
+        {
+
+            throw new Exception("Invalid number.");
+        }
+        System.out.println("End of program.");
+    }
+}
+A) Invalid number.
+B) End of program.
+C) The program will terminate with an error.
+===>correct
+D) Invalid number. End of program.
+
+
+6) What is the output of the following Java program?
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int[] arr = new int[5];
+            arr[10] = 15;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        } finally {
+            System.out.println("Finally block executed.");
+        }
+    }
+}
+==> ArrayIndexOutOfBound 
+7) What is the purpose of this program?
+A. To create an array of integers
+B. To set the value of the 10th element in an array to 15
+C. To catch an ArrayIndexOutOfBoundsException if it occurs
+D. To execute a finally block after the try and catch blocks
+
+Answer :c
+
+8) What is an exception in Java?
+A. A condition that occurs when a program runs successfully
+B. A condition that occurs when a program fails to compile
+C. A condition that occurs when a program runs into an error or unexpected situation
+D. A condition that occurs when a program is executed in debug mode
+
+Answer: C
+
+9) What is the purpose of the try block in this program?
+A. To define the code that may throw an exception
+B. To define the code that should always be executed
+C. To define the code that should be executed if an exception is caught
+D. To define the code that should be executed regardless of whether an exception is caught or not
+Answer: A
+
+10) What is the purpose of the finally block in this program?
+A. To define the code that may throw an exception
+B. To define the code that should always be executed
+C. To define the code that should be executed if an exception is caught
+D. To define the code that should be executed regardless of whether an exception is caught or not
+Answer: D
+
+CODING PROGRAMS :
+-----------------
+EXCEPTION HANDLING LAB EXERCISE STAGE-1
+========================================
+1. Exception and Messages…
+a. Write a program to create a class ‘SimpleExceptionDemo’ ,which implements main method.
+b. This program should read two integer numbers for the variables a and b from console using Scanner class.
+c. If you enter any other character except number (0 - 9 ) then the error is caught by InputMisMatchException 
+object.
+d. After that using following methods print the information about the error occurring causes in the console.
+ getMessages() printStackTrace() println() toString()
+----------------------------------------------------------------------
+2. ArrayIndexOutOfBoundException…
+a. Write a program to create a class ‘ArrayIndexExceptionDemo’ which implements main method.
+b. Inside main method create an array of int type as follows.
+int a[] = new int[2];
+c. Now try to print the value of a[3] in the console where handle the Exceptions coming from this line using try catch.
+d. In the catch block handle this exception using ArrayIndexOutOfBound Exception and print appropriate message in the console from this Exception.
+----------------------------------------------------------------------
+3. IllegalStateException…
+a. Write a program to create a class ‘IllegalStateExceptionDemo’ which implements a method as follows static void throwIllegalException( ) { try{ throw new IllegalStateException("MyException"); } catch(IllegalStateException objA){ System.out.println("caught:" +objA); } }
+b. Implement the main method, and from main method call the above method.
+c. Check the output of the program.
+------------------------------------------------------------------------
+4. ClassNotFoundException…
+a. Write a program to create a class ‘ClassNotFoundExpDemo’ which implements default constructor as follows ,
+public ClassNotFoundExpDemo { Class c; try { c = Class.forName("TestClass"); } catch (ClassNotFoundException e) { // deal with the exception here ... e.printStackTrace(); } }
+b. Implement the main method and inside main method create an object of ClassNotFoundExpDemo class.
+c. Now check the O/P.
