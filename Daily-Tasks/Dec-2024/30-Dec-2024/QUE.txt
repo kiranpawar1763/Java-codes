@@ -1,6 +1,9 @@
 Handling ArithmeticException 
 Objective:
-Write a Java program that demonstrates how to handle ArithmeticException. The program should include a method that performs division and throws an ArithmeticException if division by zero occurs. Implement exception handling in the main method to catch and handle this exception.
+Write a Java program that demonstrates how to handle ArithmeticException. 
+The program should include a method that performs division and throws an 
+ArithmeticException if division by zero occurs. 
+Implement exception handling in the main method to catch and handle this exception.
 
 Instructions:
 Create a class named DivisionExample:
