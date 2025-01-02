@@ -16,3 +16,4 @@ public class ex5
 }
 
 //op-Exception null
+//becuase age exception is not having any message so it will print null
