@@ -1,0 +1,417 @@
+1.What is the output of the following program
+public class ExceptionHandling 
+{
+	static void nit(int marks) 
+	{
+		if(marks<0||marks>50)
+		{
+			throw new IllegalArgumentException(Integer.toString(marks));
+		}
+	}
+	public static void main(String[] args) {
+		nit(55);
+	}
+}
+
+
+2.What is the output of the following program
+class InvalidPassword extends Exception
+{
+	InvalidPassword(String str) {
+		super(str);
+	}
+}
+
+public class ExceptionHandling 
+{
+	static void nit(String password) throws InvalidPassword
+	{
+		if(password.length()<5)
+			throw new InvalidPassword("Invalid Password");
+		else 
+		{
+			System.out.println("Valid Password");
+		}
+	}
+	public static void main(String[] args) {
+		try {
+			nit("NareshIT");
+		} catch (InvalidPassword e) {
+			System.out.println("Exception "+e);
+		}
+		
+	}
+}
+
+3.What is the output of the following program
+public class ExceptionHandling {
+	public static void main (String[] args) {
+		int a=20;
+		for(int i=0;i<a;i++)
+		   try{
+		     System.out.println(a/i);  
+		   }
+	}
+}
+
+4.What is the output of the following program
+class Age extends Exception
+{
+	Age(String str) {
+		super(str);
+	}
+}
+public class ExceptionHandling 
+{
+	static void nit(int age) throws Age
+	{
+		if(age<18)
+			throw new Age("Not for Vote");
+		else 
+		{
+			System.out.println("Vote");
+		}
+	}
+	public static void main(String[] args) {
+		try {
+			nit(15);
+		} catch (Age e) {
+			System.out.println("Exception "+e);
+		}		
+	}
+}
+
+5.What is the output of the following program
+class Age extends Exception
+{
+	
+}
+
+public class ExceptionHandling 
+{
+	public static void main(String[] args) {
+		try {
+			throw new Age();
+		} catch (Age e) {
+			System.out.println("Exception "+e.getMessage());
+		}
+		
+	}
+}
+
+6.What is the output of the following program
+class Age extends Exception
+{
+	Age(String str) {
+		super(str);
+	}
+}
+public class ExceptionHandling 
+{
+	static void nit(int age) throws Age
+	{
+		if(age<18)
+			throw new Age("Not for Vote");
+		else 
+		{
+			System.out.println("Vote");
+		}
+	}
+	public static void main(String[] args) {
+		try {
+			nit(19);
+		} catch (Age e) {
+			System.out.println("Exception "+e);
+		}finally {
+			System.out.println("Vote count");
+		}
+	}
+}
+
+
+7.What is the output of the following program
+class Student{    
+	void message()throws ArithmeticException {  //line 1
+		System.out.println("Hai Student");  
+		}    
+	}    
+class Faculty extends Student{    
+	void message()throws Exception {  // line 2
+		System.out.println("hai faculty");  
+		}
+}
+public class ExceptionHandling 
+{
+	public static void main(String args[]) {    
+	   Student nit = new Faculty();    
+	     
+	   try {    
+	   nit.message();    
+	   }  
+	   catch (Exception e){}   
+	  
+	  }    
+}     
+
+8.What is the output of the following program
+class Student{    
+	void message(){  // line 1
+		System.out.println("Hai Student");  
+		}    
+	}    
+	    
+class Faculty extends Student{    
+	void message()throws Exception {  // line 2
+		System.out.println("hai faculty");  
+		}
+}
+
+public class ExceptionHandling 
+{
+	public static void main(String args[]) {    
+	   Student nit = new Faculty();    
+	     
+	   try {    
+	   nit.message();    
+	   }  
+	   catch (Exception e){}   
+	  
+	  }    
+}
+
+9.What is the output of the following program
+class Student{    
+	void message(){  //line 1
+		System.out.println("Hai Student");  
+		}    
+	}    
+	    
+class Faculty extends Student{    
+	void message()throws ArithmeticException {  // line 2
+		System.out.println("hai faculty");  
+		}
+}
+public class ExceptionHandling 
+{
+	public static void main(String args[]) {    
+	   Student nit = new Faculty();    
+	     
+	   try {    
+	   nit.message();    
+	   }  
+	   catch (Exception e){
+}   
+	 
+	  }    
+}
+
+
+10.What is the output of the following program
+class Student{    
+	void message() throws Exception{  // line 1
+		System.out.println("Hai Student");  
+		}    
+	}    
+class Faculty extends Student{    
+	void message()throws Exception {  // line 2
+		System.out.println("hai faculty");  
+		}
+}
+
+public class ExceptionHandling 
+{
+	public static void main(String args[]) {    
+	   Student nit = new Faculty();    
+	     
+	   try {    
+	   nit.message();    
+	   }  
+	   catch (Exception e){}   
+	  
+	  }    
+}
+
+
+11.What is the output of the following program
+class Student{    
+	void message() throws Exception{  // line 1
+		System.out.println("Hai Student");  
+		}    
+	}    
+	    
+class Faculty extends Student{    
+	void message() {  // line 2
+		System.out.println("hai faculty");  
+		}
+}
+
+public class ExceptionHandling 
+{
+	public static void main(String args[]) {    
+	   Student nit = new Faculty();    
+	     
+	   try {    
+	   nit.message();    
+	   }  
+	   catch (Exception e){}   
+	  
+	  }    
+}
+
+
+12.What is the output of the following program
+public class ExceptionHandling  {  
+    public static void main(String args[])  
+    {           
+        try {  
+            try {  
+                try {  
+                    int arr[] = { 5,7,89,7,54,22,35,144,587,4,25,33,698,541,2,44,5,74,4 };  
+                    System.out.println(arr[35]);  
+                } catch (ArithmeticException e) {  
+                    System.out.println("Arithmetic exception");  
+                }  
+            }catch (ArrayIndexOutOfBoundsException ar) {  
+                System.out.println(" ArrayIndexOutOfBoundsException ");  
+            }  
+        }  
+        catch (Exception e) {  
+            System.out.print("Exception");  
+        }  
+    }  
+}  
+
+
+13.What is the output of the following program
+public class ExceptionHandling  {
+	void nit()  
+	{
+		throw new java.io.IOException();
+	}
+	public static void main(String[] args) {
+		ExceptionHandling nit = new ExceptionHandling();
+		nit.nit();
+		System.out.println("Executed");
+	}
+}
+
+14.What is the output of the following program
+class NIT
+{
+	static void nit() throws IOException  
+	{
+		throw new IOException("IOException");
+	}
+}
+public class ExceptionHandling  {
+	
+	public static void main(String[] args) {
+		try {
+			NIT.nit();
+		} catch (IOException e) {
+			System.out.println("Exception in catch");
+		}
+		System.out.println("Executed");
+	}
+}
+
+
+15.What is the output of the following program
+class NIT
+{
+	static void nit() throws IOException  
+	{
+		throw new IOException("Input Output Exception");
+	}
+}
+
+public class ExceptionHandling  {
+	public static void main(String[] args) throws IOException {		
+			NIT.nit();
+	}
+} 
+
+
+16. What is the output of the following program
+public class ExceptionHandling {
+	static void nit(int a,int b) {
+		   System.out.println(10/a); 
+		   int[] arr={25,54,22,141,22,141,22,35};
+		   System.out.println(arr[b]);
+	}
+	public static void main (String[] args) {
+		try{
+			nit(10, 0);
+			nit(10, 15);
+		    		    
+    		}catch(ArithmeticException e){
+    		   System.out.println("can't divide by zero");
+    		}catch(ArrayIndexOutOfBoundsException e){
+    		   System.out.println("Out of bounds!");
+    		}
+		}
+   }
+
+
+17.What is the output of the following program
+public class ExceptionHandling
+{
+        public static void main(String[] args)
+        {
+                try
+                {
+                        Exception arithmetic = new Exception("Exception");
+                        arithmetic.initCause(new ArithmeticException("ArithmeticException"));
+                        throw arithmetic;
+                }
+                catch (Exception e)
+                {
+                        System.out.println(e.getCause());
+                }
+                try
+                {
+                        NumberFormatException numberFormat = new NumberFormatException("NumberFormatException");
+                        numberFormat.initCause(new NullPointerException("NullPointerException"));
+                        throw numberFormat;
+                }
+                catch(NumberFormatException numberFormat)
+                {
+                        System.out.println(numberFormat.getCause());
+                }
+        }
+}
+
+
+18.What is the output of the following program
+public class ExceptionHandling
+{
+	static void nit1() throws ArithmeticException
+	{
+		System.out.println("nit1");
+		throw new ArithmeticException("Throws ArithmeticException nit1");
+	}
+    static void nit2() throws NullPointerException
+    {
+    	System.out.println ("nit2");
+        throw new NullPointerException ("Throws NullPointerException nit2");
+     }
+     public static void main(String args[])
+     {
+    	 try
+         {
+    		 nit2();
+         }
+         catch (NullPointerException npe)
+         {
+        	 System.out.println (npe);
+         }
+         try
+         {
+        	 nit1();
+         }
+         catch(ArithmeticException ae)
+         {
+        	 System.out.println(ae);
+         }
+     }
+}
