@@ -13,6 +13,9 @@ public class ExceptionHandling
 	}
 }
 
+op= Exception in thread "main" java.lang.IllegalArgumentException: 55
+------------------------------------------------------------------------------------------
+
 
 2.What is the output of the following program
 class InvalidPassword extends Exception
