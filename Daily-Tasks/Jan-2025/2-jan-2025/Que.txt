@@ -59,6 +59,7 @@ public class ExceptionHandling {
 }
 op-Error 
 becuase- try catch we can't Declear without catch
+========================================================================================
 4.What is the output of the following program
 class Age extends Exception
 {
