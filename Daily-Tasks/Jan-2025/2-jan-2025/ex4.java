@@ -1,6 +1,7 @@
 class Age extends Exception
 {
-	Age(String str) {
+	Age(String str) 
+	{
 		super(str);
 	}
 }
@@ -15,10 +16,13 @@ public class ex4
 			System.out.println("Vote");
 		}
 	}
-	public static void main(String[] args) {
-		try {
+	public static void main(String[] args) 
+	{
+		try 
+		{
 			nit(15);
-		} catch (Age e) {
+		} catch (Age e) 
+		{
 			System.out.println("Exception "+e);
 		}		
 	}
