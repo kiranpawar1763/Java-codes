@@ -1,0 +1,88 @@
+1)Seat Reservation System:
+
+You are tasked with developing a Java program for a simple seat reservation system using the 
+ReservationSystem class.
+ This class involves two custom exceptions: a checked exception (SeatUnavailableException)
+  and an unchecked exception
+ (InvalidReservationException). These exceptions are designed to handle different
+  scenarios related to reserving seats.
+
+* SeatUnavailableException (Checked Exception):
+->This exception should be thrown when an attempt is made to reserve seats that 
+are not available at the moment or when there are 
+insufficient seats for the specified reservation.
+
+* InvalidReservationException (Unchecked Exception):
+->This exception should be thrown when an attempt is made to reserve seats when no
+ seats are available.
+
+
+* ReservationSystem Class:
+
+-> The class should have a private instance variable availableSeats representing the
+ number of available seats.
+-> Implement a constructor to initialize the initial number of available seats.
+-> Implement a method reserveSeat(int numberOfSeats) that reserves seats, throwing
+ SeatUnavailableException for unavailability
+or insufficient seats.
+-> Implement a method reserveSeatUnchecked(int numberOfSeats) that simulates reserving 
+seats, throwing
+ InvalidReservationException for no available seats and handling SeatUnavailableException
+  for insufficient seats.
+
+
+* Main Class (ReservationSystemScenario):
+
+-> In the main method, create an instance of ReservationSystem with an 
+initial number of available seats (e.g., 30).
+-> Demonstrate the use of reserveSeat for valid and invalid seat reservations,
+ handling the SeatUnavailableException.
+-> Demonstrate the use of reserveSeatUnchecked for valid and invalid seat reservations,
+ handling both InvalidReservationException and SeatUnavailableException.
+-> Ensure that the program provides clear error messages and handles exceptions 
+appropriately.
+
+----------------------------------------------------------
+
+2)Shopping Cart Item Addition
+
+You are assigned to develop a Java program for a simple online shopping cart using 
+the ShoppingCart class. The class involves 
+two custom exceptions: a checked exception (InvalidItemException) and an unchecked 
+exception (OutOfStockException). 
+These exceptions are designed to handle different scenarios related to adding items 
+to a shopping cart.
+
+* InvalidItemException (Checked Exception):
+-> This exception should be thrown when an attempt is made to add an invalid quantity
+ of items (non-positive) or when there are 
+not enough items in stock for the specified quantity.
+
+* OutOfStockException (Unchecked Exception):
+-> This exception should be thrown when an attempt is made to add items exceeding 
+the available stock.
+
+* ShoppingCart Class:
+-> The class should have a private instance variable availableItems representing
+ the number of items in stock.
+-> Implement a constructor to initialize the initial number of available items.
+-> Implement a method addItem(int quantity) that adds items to the cart, throwing
+ InvalidItemException for invalid quantities or 
+insufficient stock.
+-> Implement a method addItemUnchecked(int quantity) that simulates adding items, 
+throwing OutOfStockException for 
+quantities exceeding the available stock and handling IllegalArgumentException for
+ invalid quantities.
+
+* Main Class (ShoppingCartScenario):
+
+-> In the main method, create an instance of ShoppingCart with an initial stock
+ of 50 items.
+-> Demonstrate the use of addItem for valid and invalid quantities, handling the
+ InvalidItemException.
+-> Demonstrate the use of addItemUnchecked for valid and invalid quantities, handling 
+both IllegalArgumentException and
+OutOfStockException.
+
+Note: Ensure that the program provides clear error messages and handles exceptions 
+appropriately.
